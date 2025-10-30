@@ -6,7 +6,7 @@
     --body-font-weight: 300;
     --body-bold-font-weight: 700;
     --body-font-style: normal;
-    --header-bg-color: #3A6D8C;
+    --header-bg-color: #284c63;
     --nav-bg-color: #001F3F;
     --card-header-color: #EAD8B1;
     --header-txt-color: #ffffff;
@@ -107,6 +107,9 @@ h1 {
 
 .card a {
     padding: 0;
+    font-family: var(--body-font);
+    font-weight: var(--body-font-weight);
+    font-style: var(--body-font-style);
 }
 
 nav {
