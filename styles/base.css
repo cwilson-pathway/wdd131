@@ -1,0 +1,138 @@
+:root {
+    --header-font: "Galindo", sans-serif;
+    --header-font-weight: 400;
+    --header-font-style: normal;
+    --body-font: "Zain", sans-serif;
+    --body-font-weight: 300;
+    --body-bold-font-weight: 700;
+    --body-font-style: normal;
+    --header-bg-color: #3A6D8C;
+    --nav-bg-color: #001F3F;
+    --card-header-color: #EAD8B1;
+    --header-txt-color: #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    padding: .2rem;
+}
+
+header span {
+    display: block;
+}
+
+main {
+    max-width: 1070px;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+
+main h2 {
+    grid-column: span 2;
+    padding: 20px;
+}
+
+main p {
+    font-family: var(--body-font);
+    font-weight: var(--body-font-weight);
+}
+
+main h4 {
+    font-family: var(--body-font);
+    font-weight: var(--body-bold-font-weight);
+}
+
+.card {
+    margin: .2rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.card * {
+    padding: .4rem;
+}
+
+.sep-1 img {
+    width: 150px;
+    height: auto;
+    margin-left: 1rem;
+    float: right;
+}
+
+.sep-2 h4 {
+    margin: 1rem;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.sep-2 img {
+    width: 200px;
+    height: auto;
+    margin-right: 1rem;
+    float: left;
+}
+
+h1, h2, h3 {
+    font-family: var(--header-font);
+    font-weight: var(--header-font-weight);
+    font-style: var(--header-font-style);
+    text-align: center;
+    border: 0px;
+    border-radius: 10px 10px 0 0;
+}
+
+h1 {
+    padding: 1.5rem;
+    color: var(--header-txt-color);
+    background-color: var(--header-bg-color);
+}
+
+.card h2, .card h3 {
+    background-color: var(--card-header-color);
+}
+
+.card ul {
+    width: auto;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    place-content: center;
+}
+
+.card a {
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    padding: .5rem;
+    background-color: var(--nav-bg-color);
+    justify-content: space-around;
+}
+
+nav a, footer p {
+    color: var(--header-txt-color);
+    font-family: var(--body-font);
+    font-weight: var(--body-font-weight);
+    font-style: var(--body-font-style);
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--header-bg-color);
+    border: 0;
+    border-radius: 0 0 10px 10px;
+}

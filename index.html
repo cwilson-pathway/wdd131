@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 1131</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Christian Wilson - Testing javascript on an index page">
+    <meta name="author" content="Christian Wilson">
+    <title>WDD 131 - Dynamic Web Fundamentals - Christian Wilson</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Galindo&family=Zain:wght@300;700&display=swap" rel="stylesheet">
+    <script defer src="scripts/getdates.js"></script>
 </head>
 <body>
-    <h1>WDD 131 - Christian Wilson</h1>
+    <header>
+        <span id="course-title"><h1>WDD 131 - Dynamic Web Fundamentals</h1></span>
+        <nav>
+            <a href="https://www.linkedin.com/in/christian-wilson-44b216120/">LinkedIn</a>
+            <a href="https://byupw.instructure.com/">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/10?lang=eng&id=p5#p5">Scripture</a>
+            <a href="">Final Project</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Christian Wilson</h2>
+        <section class="card">
+            <h3>About</h3>
+            <div class="sep-1">
+                <img src="images/profile.webp" alt="Picture of Christian Wilson">
+                <p>Hey, my name is Christian Wilson. I currently live in Ogden UT. I started BYU Pathway the first term of 2025. I took the fourth term off and I'm back for more. My main hobbies are going to the gym, making music, and playing chess. While making a career out of music composition would be nice, software development is a close second to that, and I'm hoping that career opportunities in this sector will help enable my music composition efforts.</p>
+            </div>
+            <div class="sep-2">
+                <h4>Where I Live</h4>
+                <img src="images/lewis-peak-small.jpg" alt="Picture atop Lewis Peak">
+                <p>I live in the more metropolitan part of Northern Utah. It feels relatively quiet, with many mountaineers, hunters, hikers and skiiers.</p>
+            </div>
+        </section>
+        <section class="card">
+            <h3>Favorite Temples</h3>
+            <ul>
+                <li><a href="https://www.churchofjesuschrist.org/temples/details/salt-lake-temple?lang=eng">Salt Lake Temple</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/temples/details/nauvoo-illinois-temple?lang=eng">Nauvoo Temple</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/temples/details/tokyo-japan-temple?lang=eng">Tokyo, Japan Temple</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Christian Wilson, Utah, United States.</p>
+        <p>Last modified <span id="modified"></span></p>
+    </footer>
 </body>
 </html>
