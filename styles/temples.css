@@ -1,0 +1,124 @@
+:root {
+    --header-footer-bg-color: #662222;
+    --header-footer-txt-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+header, footer {
+    background-color: var(--header-footer-bg-color);
+    color: var(--header-footer-txt-color);
+}
+
+header {
+    display: flex;
+    position: relative;
+    height: 71px;
+    align-items: center;
+}
+
+header h1 {
+    padding-left: 10px;
+}
+
+#menu {
+    position:absolute;
+    height: 100%;
+    right: 0px;
+    top:0px;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    background-color: transparent;
+}
+
+#menu::before {
+	content: "☰";
+    padding: 100% .8rem;
+}
+
+#menu.open::before {
+	content: "X";
+    padding: 100% .8rem;
+    background-color: black;
+}
+
+.navigation {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.navigation a {
+    display:none;
+    text-align: center;
+    padding: .5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.navigation a:hover {
+    background-color: rgb(41, 41, 41);
+}
+
+.open a {
+    display: block;
+}
+
+.active {
+    background-color: rgb(75, 75, 75);
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+main h1 {
+    margin: 50px 0 20px;
+    text-align: center;
+}
+
+.images {
+    place-items: center;
+}
+
+img {
+    margin: 0 20px;
+    max-width: 90%;
+    height: auto;
+    place-self: center;
+}
+
+figure {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+figcaption {
+    margin: 5px 0 20px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    height: 71px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p  {
+    margin: 3px;
+}
