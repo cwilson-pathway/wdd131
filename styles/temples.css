@@ -21,8 +21,10 @@ header {
     align-items: center;
 }
 
-header h1 {
+header p {
     padding-left: 10px;
+    font-weight: 700;
+    font-size: 30px;
 }
 
 #menu {
@@ -45,6 +47,10 @@ header h1 {
 	content: "X";
     padding: 100% .8rem;
     background-color: black;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .navigation {
