@@ -3,13 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ogden, Utah</title>
+    <title>USA Information</title>
     <meta name="author" content="Christian Monroe Wilson">
-    <meta name="description" content="Information about Ogden, Utah, USA, birthplace of the Author of this very page.">
+    <meta name="description" content="Information about the USA, birthplace of the Author of this very page.">
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <h1>USA</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture class="hero-img">
+                <source media="(min-width: 800px)" srcset="images/maria-oswalt-capital-building.webp">
+                <img src="images/maria-oswalt-capital-building-small.webp" alt="Picture of the Capitol building from a street." width="400">
+            </picture>
+            <div class="data">
+                <h2>Data</h2>
+                <table>
+                    <tr>
+                        <th>Area:</th>
+                        <td>3.797 million sq mi</td>
+                    </tr>
+                    <tr>
+                        <th>Population:</th>
+                        <td>342,828,155</td>
+                    </tr>
+                    <tr>
+                        <th>Capital:</th>
+                        <td>Washington D.C.</td>
+                    </tr>
+                    <tr>
+                        <th>Languages:</th>
+                        <td>English</td>
+                    </tr>
+                    <tr>
+                        <th>Currency:</th>
+                        <td>USD</td>
+                    </tr>
+                    <tr>
+                        <th>Time Zone:</th>
+                        <td>UTC -05:00</td>
+                    </tr>
+                    <tr>
+                        <th>Calling Code:</th>
+                        <td>+1</td>
+                    </tr>
+                    <tr>
+                        <th>Internet TLD:</th>
+                        <td>.us</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="weather">
+                <h2>Weather</h2>
+                <picture>
+                    <img src="images/cloud-sun-light-icon.svg" alt="Picture of the sun behind a cloud">
+                </picture>
+                <table>
+                    <tr>
+                        <th class="city">Washington D.C.</th>
+                    </tr>
+                    <tr>
+                        <th>Temperature:</th>
+                        <td id="temp"></td>
+                    </tr>
+                    <tr>
+                        <th>Conditions:</th>
+                        <td>Partly Cloudy</td>
+                    </tr>
+                    <tr>
+                        <th>Wind:</th>
+                        <td id="wind-speed"></td>
+                    </tr>
+                    <tr>
+                        <th>Wind Chill:</th>
+                        <td id="wind-chill"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>Hero image by Maria Oswalt</p>
+        <p>&copy; <span id="currentyear"></span> Christian Wilson, Utah, United States.</p>
+        <p>Last modified <span id="modified"></span></p>
+    </footer>
 </body>
 </html>

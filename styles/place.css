@@ -1,0 +1,146 @@
+:root {
+    --header-footer-bg-color: rgb(27, 27, 168);
+    --header-footer-text-color: white;
+    --element-border: 1px solid rgb(219, 219, 219);
+    --data-bg-color: rgba(236, 211, 211, 0.808);
+    --wide-h2-bg-color: rgba(0, 0, 255, 0.849);
+    --floating-text-padding: 50px 1rem 1rem 1rem;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+  border-bottom: 5px solid var(--header-footer-bg-color);
+}
+
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* For small view/general */
+header {
+    display: flex;
+    height: 80px;
+    background-color:var(--header-footer-bg-color);
+}
+
+h1 {
+    align-self: center;
+    color: var(--header-footer-text-color);
+}
+
+.data h2, .weather h2 {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.data {
+    border-bottom: var(--element-border);
+    padding-bottom: 10px;
+}
+
+tr {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+th, td {
+    width: 100%;
+    padding: 5px 0;
+}
+
+th {
+    text-align: right;
+}
+
+.city {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.weather picture {
+    display: flex;
+}
+
+.weather img {
+    width: 150px;
+    align-self: center;
+}
+
+footer {
+    border-top: var(--element-border);
+    margin-top: 10px;
+    padding-top: 10px;
+    background-color: var(--header-footer-bg-color);
+    color: var(--header-footer-text-color);
+}
+
+footer p {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+.wide-header-data {
+    display: none;
+}
+
+.wide-header-weather {
+    display: none;
+}
+
+/* wide view */
+@media screen and (min-width: 800px) {
+    .hero {
+        position: relative;
+    }
+
+    .data {
+        padding: var(--floating-text-padding);
+        position:absolute;
+        top: 5rem;
+        left: 5rem;
+        background-color: var(--data-bg-color);
+        z-index: 1;
+    }
+
+    .weather {
+        padding: var(--floating-text-padding);
+        position: absolute;
+        right: 5rem;
+        bottom: 4rem;
+        background-color: var(--data-bg-color);
+        z-index: 1;
+    }
+
+    .data h2, .weather h2 {
+        width: 90%;
+        position: absolute;
+        top: -.5rem;
+        left: -.5rem;
+        text-align: left;
+        padding: .7rem 0 .7rem 1rem;
+        z-index: 2;
+        background-color: var(--wide-h2-bg-color);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.658);
+    }
+
+    .weather h2::after {
+        content: "🌤️";
+    }
+
+    .weather img {
+        display: none;
+    }
+    
+    footer {
+        margin: 0;
+    }
+
+    .data, .wide-header-data, .weather, .wide-header-weather {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.658);
+    }
+}
