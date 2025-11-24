@@ -95,25 +95,95 @@ const temples = [
 const hamButton = document.querySelector("#menu");
 const navigation = document.querySelector(".navigation");
 const imagesContainer = document.querySelector(".images");
+const homeFilter = document.querySelector("#home");
+const oldFilter = document.querySelector("#old");
+const newFilter = document.querySelector("#new");
+const largeFilter = document.querySelector("#large");
+const smallFilter = document.querySelector("#small");
 
-temples.forEach((temple) => imagesContainer.innerHTML += (
-		`
-		    <figure>
-                <h2>${temple.templeName}</h2>
-                <div class="info">
-                    <p><span>Location:</span> ${temple.location}</p>
-                    <p><span>Dedicated:</span> ${temple.dedicated}</p>
-                    <p><span>Size:</span> ${temple.area} sq ft</p>
-                </div>
-                <img src="${temple.imageUrl}" alt="${temple.imgAlt}">
-            </figure>
-		`
-	)
-);
+homeFilter.classList.add("active");
+createCards(temples);
 
+homeFilter.addEventListener("click", () => {
+	deactivateNavElements();
+	homeFilter.classList.add("active");
+	toggleNavigation();
+	return createCards(temples);
+})
 
+oldFilter.addEventListener("click", () => {
+	deactivateNavElements();
+	oldFilter.classList.add("active");
+	toggleNavigation();
+	createCards(temples.filter(temple => {
+		let year = "";
+		for (let i = 0; i < 4; i++) {
+			year += temple.dedicated[i];
+		}
+		year = parseInt(year);
+		return year < 1900;
+	}));
+});
 
-hamButton.addEventListener("click", () => {
+newFilter.addEventListener("click", () => {
+	deactivateNavElements();
+	newFilter.classList.add("active");
+	toggleNavigation();
+	createCards(temples.filter(temple => {
+		let year = "";
+		for (let i = 0; i < 4; i++) {
+			year += temple.dedicated[i];
+		}
+		year = parseInt(year);
+		return year > 2000;
+	}));
+});
+
+largeFilter.addEventListener("click", () => {
+	deactivateNavElements();
+	largeFilter.classList.add("active");
+	toggleNavigation();
+	createCards(temples.filter(temple => temple.area > 90000));
+});
+
+smallFilter.addEventListener("click", () => {
+	deactivateNavElements();
+	smallFilter.classList.add("active");
+	toggleNavigation();
+	createCards(temples.filter(temple => temple.area < 10000));
+});
+
+function createCards(filteredTemples) {
+	document.querySelector(".images").innerHTML = "";
+	filteredTemples.forEach((temple) => imagesContainer.innerHTML += (
+			`
+				<figure>
+					<h2>${temple.templeName}</h2>
+					<div class="info">
+						<p><span>Location:</span> ${temple.location}</p>
+						<p><span>Dedicated:</span> ${temple.dedicated}</p>
+						<p><span>Size:</span> ${temple.area} sq ft</p>
+					</div>
+					<img src="${temple.imageUrl}" alt="${temple.imgAlt}" loading="lazy">
+				</figure>
+			`
+		)
+	);
+}
+
+function toggleNavigation() {
 	navigation.classList.toggle("open");
 	hamButton.classList.toggle("open");
+}
+
+function deactivateNavElements() {
+	homeFilter.classList.remove("active");
+	oldFilter.classList.remove("active");
+	newFilter.classList.remove("active");
+	largeFilter.classList.remove("active");
+	smallFilter.classList.remove("active");
+}
+
+hamButton.addEventListener("click", () => {
+	toggleNavigation();
 });
