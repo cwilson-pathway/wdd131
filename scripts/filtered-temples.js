@@ -92,6 +92,7 @@ const temples = [
   },
 ]
 
+const header = document.querySelector("#filter-header")
 const hamButton = document.querySelector("#menu");
 const navigation = document.querySelector(".navigation");
 const imagesContainer = document.querySelector(".images");
@@ -101,10 +102,12 @@ const newFilter = document.querySelector("#new");
 const largeFilter = document.querySelector("#large");
 const smallFilter = document.querySelector("#small");
 
+header.textContent = "Home";
 homeFilter.classList.add("active");
 createCards(temples);
 
 homeFilter.addEventListener("click", () => {
+	header.textContent = "Home";
 	deactivateNavElements();
 	homeFilter.classList.add("active");
 	toggleNavigation();
@@ -112,6 +115,7 @@ homeFilter.addEventListener("click", () => {
 })
 
 oldFilter.addEventListener("click", () => {
+	header.textContent = "Old";
 	deactivateNavElements();
 	oldFilter.classList.add("active");
 	toggleNavigation();
@@ -126,6 +130,7 @@ oldFilter.addEventListener("click", () => {
 });
 
 newFilter.addEventListener("click", () => {
+	header.textContent = "New";
 	deactivateNavElements();
 	newFilter.classList.add("active");
 	toggleNavigation();
@@ -140,6 +145,7 @@ newFilter.addEventListener("click", () => {
 });
 
 largeFilter.addEventListener("click", () => {
+	header.textContent = "Large";
 	deactivateNavElements();
 	largeFilter.classList.add("active");
 	toggleNavigation();
@@ -147,6 +153,7 @@ largeFilter.addEventListener("click", () => {
 });
 
 smallFilter.addEventListener("click", () => {
+	header.textContent = "Small";
 	deactivateNavElements();
 	smallFilter.classList.add("active");
 	toggleNavigation();
