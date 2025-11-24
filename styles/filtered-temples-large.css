@@ -1,0 +1,41 @@
+@media (min-width: 725px) {
+    #menu {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .navigation {
+        position: static;
+        width: 100%;
+        grid-column: 2/3;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: transparent;
+    }
+
+    .navigation a {
+        display: block;
+    }
+
+    .images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    figure {
+        padding: 0;
+    }
+
+    figcaption {
+        margin-bottom: 30px;
+        caption-side: top;
+    }
+
+
+}
