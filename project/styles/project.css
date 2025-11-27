@@ -1,0 +1,20 @@
+:root {
+    /* ----------color schema---------- */
+    --bg-color: #e9e1dc;
+    --header-color: #e23c3c;
+    --header-font: "Science Gothic", sans-serif;
+    --body-font: "Gemunu Libre", sans-serif;
+}
+
+* {
+    background-color: var(--bg-color);
+}
+
+h1, h2{
+    background-color: var(--header-color);
+    font-family: var(--header-font)
+}
+
+p {
+    font-family: "Gemunu Libre", sans-serif;
+}
