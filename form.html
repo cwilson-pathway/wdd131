@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="author" content="Christian Wilson">
+    <meta name="description" content="Fill out the product review form and let us know how we did!">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="#">
+            <label>Product Name <select name="products" id="products" required>
+                <option value="" disabled selected>Choose a Product...</option>
+                <!-- <option value="camera">Camera</option>
+                <option value="camera-bag">Camera Bag</option>
+                <option value="microsd-card">microSD Card</option> -->
+            </select></label>
+            <legend>Overall Rating</legend>
+            <label><input type="radio" name="rating" value="one-star"> ⭐</label>
+            <label><input type="radio" name="rating" value="two-star"> ⭐⭐</label>
+            <label><input type="radio" name="rating" value="three-star"> ⭐⭐⭐</label>
+            <label><input type="radio" name="rating" value="four-star"> ⭐⭐⭐⭐</label>
+            <label><input type="radio" name="rating" value="five-star"> ⭐⭐⭐⭐⭐</label>
+            
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

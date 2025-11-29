@@ -1,0 +1,17 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+select {
+    display:block;
+    height: 40px;
+}
+
+label, legend {
+    display: block;
+    font-weight: 500;
+}
+
+input [type="radio"] {
+    padding: 20px;
+}
