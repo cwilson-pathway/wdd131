@@ -1,17 +1,139 @@
+:root {
+    --star-trans: .1s ease;
+    --star-size: 40px;
+    --header-footer-bg-color: rgb(245, 149, 245);
+}
+
 * {
     font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
-select {
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--header-footer-bg-color);
+}
+
+main {
+    margin: 20px auto;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    background-color: #f7f3f3;
+    box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.247);
+}
+
+fieldset {
+    border: none;
+    margin-top: 20px;
+}
+
+select, input[type="date"] {
     display:block;
-    height: 40px;
+    height: 44px;
+    width: 100%;
 }
 
-label, legend {
+legend, .input-head {
     display: block;
     font-weight: 500;
+    margin-bottom: 5px;
 }
 
-input [type="radio"] {
-    padding: 20px;
+.star-rating {
+    display: flex;
+    width: 160px;
+    margin-top: 5px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    position: relative;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating > label {
+    width: var(--star-size);
+    height: var(--star-size);
+    font-size: var(--star-size);
+    transition: var(--star-trans);
+    color: gold;
+}
+
+.star-rating label:hover {
+    color: black;
+    transition: var(--star-trans);
+}
+
+.star-rating label:active::before {
+    transform:scale(1.1);
+}
+
+.star-rating label::before {
+    content: "\2606";
+    position: absolute;
+    top: 0px;
+    line-height: 26px;
+}
+
+.star-rating input:checked ~ label:before {
+    content: "\2605";
+}
+
+.usefulness legend span {
+    font-style: italic;
+}
+
+.usefulness div {
+    margin: 10px 0 0 10px;
+}
+
+textarea {
+    display:block;
+    padding: 2%;
+    height:4rem;
+    width: 96%;
+}
+
+input[type="text"] {
+    height: 44px;
+    width: 96%;
+    padding: 2%;
+}
+
+input[type="submit"] {
+    height: 44px;
+    width: 100%;
+    padding: 0 15px;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+.optional {
+    font-size: small;
+    color: rgb(42, 42, 110);
+}
+
+footer {
+    margin-top: 10px;
+    padding: 20px 0;
+    background-color: var(--header-footer-bg-color);
+    text-align: center;
+}
+
+/* --------- Submission Page ------------ */
+h2, p {
+    text-align: center;
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+p {
+    margin-bottom: 10px;
 }

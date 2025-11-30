@@ -11,30 +11,83 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="scripts/form.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Product Review</h1>
     </header>
     <main>
-        <form method="get" action="#">
-            <label>Product Name <select name="products" id="products" required>
-                <option value="" disabled selected>Choose a Product...</option>
-                <!-- <option value="camera">Camera</option>
-                <option value="camera-bag">Camera Bag</option>
-                <option value="microsd-card">microSD Card</option> -->
-            </select></label>
-            <legend>Overall Rating</legend>
-            <label><input type="radio" name="rating" value="one-star"> ⭐</label>
-            <label><input type="radio" name="rating" value="two-star"> ⭐⭐</label>
-            <label><input type="radio" name="rating" value="three-star"> ⭐⭐⭐</label>
-            <label><input type="radio" name="rating" value="four-star"> ⭐⭐⭐⭐</label>
-            <label><input type="radio" name="rating" value="five-star"> ⭐⭐⭐⭐⭐</label>
+        <form method="get" action="review.html">
+            <fieldset>
+                <label for="products" class="input-head">Product Name*</label>
+                <select name="products" id="products" required>
+                    <option value="" disabled selected>Choose a Product...</option>
+
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Overall Rating*</legend>
+                <div class="star-rating">
+                    <input type="radio" id="star1" name="rating" value="5" required>
+                    <label for="star1"></label>
+
+                    <input type="radio" id="star2" name="rating" value="4" required>
+                    <label for="star2"></label>
+
+                    <input type="radio" id="star3" name="rating" value="3" required>
+                    <label for="star3"></label>
+
+                    <input type="radio" id="star4" name="rating" value="2" required>
+                    <label for="star4"></label>
+
+                    <input type="radio" id="star5" name="rating" value="1" required>
+                    <label for="star5"></label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <label for="install-date" class="input-head">Installation Date: </label>
+                <input type="date" id="install-date" name="install-date" required>
+            </fieldset>
+
+            <fieldset class="usefulness">
+                <legend>Which features did you find useful in the product? <span>(Check all that apply)</span></legend>
+                <div>
+                    <input type="checkbox" id="durability" name="durability", value="yes">
+                    <label for="durability">Durability</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="ease" name="ease", value="yes">
+                    <label for="ease">Ease of Use</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="performance" name="performance", value="yes">
+                    <label for="performance">Performance</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="design" name="design", value="yes">
+                    <label for="design">Design</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <label for="written-review" class="input-head">Written Review <span class="optional">(optional)</span></label>
+                <textarea name="written-review" id="written-review"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <label for="user-name" class="input-head">Your Name <span class="optional">(optional)</span></label>
+                <input type="text" name="user-name" id="user-name">
+            </fieldset>
             
+            <input type="submit" value="Post my review" class="submit-button" aria-label="Post button">
+
         </form>
     </main>
     <footer>
-
+        <p>&copy; <span id="currentyear"></span> Christian Wilson, Utah, United States.</p>
+        <p>Last modified <span id="modified"></span></p>
     </footer>
 </body>
 </html>
