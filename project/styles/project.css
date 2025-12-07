@@ -1,20 +1,188 @@
 :root {
     /* ----------color schema---------- */
     --bg-color: #e9e1dc;
-    --header-color: #e23c3c;
+    --header-color: #ff8383;
     --header-font: "Science Gothic", sans-serif;
     --body-font: "Gemunu Libre", sans-serif;
 }
 
 * {
     background-color: var(--bg-color);
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: var(--header-color);
+    align-content: center;
+    position: relative;
+    height: 80px;
+}
+
+header p {
+    height: auto;
+    margin: 0;
+    font-family: var(--header-font);
+    font-weight: 600;
+    font-size: larger;
+    padding: 5px;
+    background-color: transparent;
+}
+
+button[id="hamb-button"] {
+    border: none;
+    position:absolute;
+    background-color: transparent;
+    top: 16%;
+    right: 10px;
+    font-size: 40px;
+    padding: 6px;
+}
+
+button[id="hamb-button"]::before {
+    content: "≡";
+}
+
+button[id="hamb-button"].active::before {
+    content: "X";
+}
+
+button[id="hamb-button"]:active, a:active {
+    transform: scale(1.1);
+    transition: 0.1s ease-out;
+}
+
+ul[id="navigation"] {
+    display: none;
+}
+
+ul.active {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+}
+
+a {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    font-family: var(--body-font);
+    font-size: 40px;
+    background-color: transparent;
+    color: #fff;
+}
+
+footer {
+    padding: 10px;
+    background-color: var(--header-color);
+}
+
+footer p, footer span {
+    background-color: transparent;
+    text-align: center;
+}
+
+a[id="active"] {
+    background-color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ----------index.html---------- */
+main {
+    max-width: 400px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    box-shadow: 4px 4px 12px 6px #555;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 90%;
+    height: auto;
+    place-self: center;
+    border: 3px solid #000;
 }
 
 h1, h2{
-    background-color: var(--header-color);
-    font-family: var(--header-font)
+    background-color: transparent;
+    font-family: var(--header-font);
+    padding: 5px;
+    text-align: center;
 }
 
 p {
     font-family: "Gemunu Libre", sans-serif;
+    font-size: large;
+}
+
+main p {
+    margin: 10px;
+}
+
+/* ----------portfolio.html---------- */
+
+iframe {
+    aspect-ratio: 16 / 9;
+    width: 90%;
+    height: auto;
+    place-self: center;
+    margin: 50px 0;
+}
+
+/* ----------contact.html---------- */
+
+fieldset {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+label, input[type="submit"] {
+    font-family: var(--body-font);
+}
+
+label {
+    font-size: 20px;
+    padding: 5px 0;
+}
+
+input, select, textarea {
+    padding: 5px;
+    font-size: 20px;
+    border: 1px solid #999;
+    border-radius: 6px;
+}
+
+input, select {
+    height: 40px;
+}
+
+textarea {
+    height: 10rem;
+}
+
+select {
+    width: 100%;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #d3ebce;
+    box-shadow: 2px 2px 7px 4px #999;
 }

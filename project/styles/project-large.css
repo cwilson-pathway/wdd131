@@ -1,0 +1,58 @@
+@media (min-width: 500px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+    }
+    
+    header p {
+        font-size: 25px;
+    }
+
+    nav {
+        width: 100%;
+        background-color: transparent;
+    }
+
+    button[id="hamb-button"] {
+        display: none;
+    }
+
+    ul[id="navigation"] {
+        margin: 10px;
+        display: flex;
+        background-color: transparent;
+    }
+
+    a {
+        font-size: 25px;
+        color: #000;
+    }
+
+    a[id="active"] {
+        background-color: #eee;
+    }
+
+    main {
+        max-width: 900px;
+    }
+
+    /* ----------index.html---------- */
+
+    .about {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    img {
+        width: 200px;
+        float: left;
+        margin: 10px;
+    }
+
+    /* ----------portfolio.html---------- */
+    
+    .certificate {
+        width: 90%;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Christian Wilson Music</title>
+    <meta name="author" content="Christian Wilson">
+    <meta name="description" content="Contact Christian Wilson for inquiries like contracts, commissions, fan mail, etc.">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/project-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <p>Christian Wilson Music</p>
+        <nav>
+            <button id="hamb-button" aria-label="Menu button."></button>
+            <ul id="navigation">
+                <a href="./index.html">Home</a>
+                <a href="./portfolio.html">Portfolio</a>
+                <a href="#" id="active">Contact</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact</h1>
+        <form method="get" action="./contact-successful.html">
+            <fieldset>
+                <label for="fname">First Name*: </label>
+                <input type="text" id="fname" name="fname" placeholder="John" required>
+            </fieldset>
+            <fieldset>
+                <label for="lname">Last Name*: </label>
+                <input type="text" id="lname" name="lname" placeholder="Doe" required>
+            </fieldset>
+            <fieldset>
+                <label for="company">Company: </label>
+                <input type="text" id="company" name="company">
+            </fieldset>
+            <fieldset>
+                <label for="email">Email*: </label>
+                <input type="text" id="email" name="email" placeholder="johndoe@gmail.com"required>
+            </fieldset>
+            <fieldset>
+                <label for="inquiry">Inquiry Type*: </label>
+                <select name="inquiry" id="inquiry" required>
+                    <option value="" selected disabled>Select One...</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label for="subject">Subject*: </label>
+                <input type="text" id="subject" name="subject" required>
+            </fieldset>
+            <fieldset>
+                <label for="inquiry">Message*: </label>
+                <textarea name="message" id="message" placeholder="Type here..."></textarea>
+            </fieldset>
+            <input type="submit" aria-label="Submit button" value="Send My Message">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Christian Wilson, Utah, United States.</p>
+        <p>Last modified <span id="modified"></span></p>
+    </footer>
+</body>
+</html>
